@@ -4,24 +4,6 @@ package in.scalive.exception;
 import java.time.LocalDateTime;
 import java.util.List;
 
-/**
- * ERROR RESPONSE DTO — A structured JSON shape for all error responses.
- *
- * Instead of returning a raw error string, we always return a consistent
- * JSON object so the client (frontend / mobile app) can reliably parse it.
- *
- * Example JSON output:
- * {
- *   "timestamp": "2024-01-15T10:30:00",
- *   "status": 400,
- *   "error": "Bad Request",
- *   "messages": ["Name is required", "Email must be a valid format"],
- *   "path": "/users"
- * }
- *
- * DTO = Data Transfer Object — a plain class used only to carry data,
- * no business logic here.
- */
 public class ErrorResponse {
 
     private LocalDateTime timestamp;
